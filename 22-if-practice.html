@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICE 1</title>
+</head>
+<body>
+    <h1>PRACTICE 1</h1>
+    <input type="text" id="num">
+    <button onclick="calculate()">CALCULATE</button>
+    <br>
+    <input type="text" id="num1">
+    <button onclick="discount()">DISCOUNT</button>
+    <p class="text">Result: </p>
+    <script>
+
+        function calculate(){
+            let num = Number(document.querySelector("#num").value);
+            if (num != 0){
+                num /= 5; //num = num/5;
+            }
+           alert(num);
+        }
+        function discount(){
+            let num = Number(document.querySelector("#num1").value);
+            let textEl = document.querySelector(".text");
+
+            if(num>500){
+                num*=0.9;
+            }
+            textEl.innerText = `Result: ${num}`;
+            alert(num);
+
+
+        }
+
+    </script>
+</body>
+</html>

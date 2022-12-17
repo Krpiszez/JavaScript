@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+        }
+        .dark {
+            background-color: black;
+            color: white;
+        }
+        .dark button {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>DARK MODE LIGHT MODE</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit itaque architecto ab, officiis suscipit animi a ipsam
+         ullam ad nobis! Eaque, sunt necessitatibus cupiditate sed fugiat eum pariatur quaerat itaque vitae. Rerum veritatis unde
+          sint laboriosam voluptas quae ad molestiae dolores dolorum, fugit reprehenderit architecto
+           laborum cumque. Ullam, quis ducimus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit itaque architecto ab, officiis suscipit animi a ipsam
+         ullam ad nobis! Eaque, sunt necessitatibus cupiditate sed fugiat eum pariatur quaerat itaque vitae. Rerum veritatis unde
+          sint laboriosam voluptas quae ad molestiae dolores dolorum, fugit reprehenderit architecto
+           laborum cumque. Ullam, quis ducimus?</p>
+    <button onclick="setDarkMode()" id="btnMode">DARK MODE</button>
+
+    <script>
+        let mode = "LIGHT MODE";
+
+        function setDarkMode(){
+            let btnMode = document.querySelector("#btnMode");
+            let body = document.querySelector("body");
+
+            btnMode.innerText = mode;
+
+            if(mode === "LIGHT MODE"){
+                body.classList.add("dark");
+                mode = "DARK MODE";
+                console.log(mode);
+            }else{
+                body.classList.remove("dark");
+                mode = "LIGHT MODE";
+            }
+        }
+    </script>
+</body>
+</html>

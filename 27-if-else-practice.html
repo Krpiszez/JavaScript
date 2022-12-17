@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="email" id="email" placeholder="E-mail"/>
+<input type="password" id="pwd" placeholder="Pwd"/>
+<button onclick="login()">Login</button>
+
+<script>
+    function login(){
+    let email = "techpro@gmail.com";
+    let pwd = "12345";
+    let userEmail = document.querySelector("#email").value;
+    let userPwd = document.querySelector("#pwd").value;
+
+    if(email === userEmail && pwd === userPwd){
+        alert("Correct mail and pwd")
+    }else{
+        alert("Incorrect mail or pwd")
+    }
+}
+    
+
+</script>
+
+    
+</body>
+</html>

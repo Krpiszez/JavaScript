@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="weight" placeholder="weight">
+    <input type="text" id="height" placeholder="height">
+    <button onclick="bmi()">BMI</button>
+    <p class="text"></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eius reiciendis nam blanditiis odit nihil vero itaque laudantium incidunt,
+         at vel! Molestias consequuntur nemo nesciunt hic? Blanditiis magnam eos ullam!</p>
+    <p class="text1"></p>
+    <button onclick="bmi2()">CLICK HERE TO CALCULATE YOUR BMI</button>
+    
+
+    <script>
+function bmi(){
+    let weight = Number(document.querySelector("#weight").value);
+    let height = Number(document.querySelector("#height").value);
+    let text = document.querySelector(".text");
+    let bmi = weight/(height/100)**2;
+    if(bmi<25 && bmi>18.5){
+        text.innerHTML = `Your bmi is: ${bmi} and it is Ideal!`
+    }else{
+        text.innerHTML = `Your bmi is: ${bmi} and it is Not Ideal!`
+        alert("OBESE")
+    }
+}
+function bmi2(){
+    let weight = prompt("Enter your weight in kg");
+    let height = prompt("Enter your height in cm");
+    
+    let text = document.querySelector(".text1");
+    let bmi = weight/(height/100)**2;
+    if(bmi<=18.5){
+        text.innerHTML = `Your bmi is: ${bmi} and it is Not Ideal!`
+        alert("Be aware of wind")
+    }else if(bmi>18.5 && bmi<25){
+        text.innerHTML = `Your bmi is: ${bmi} and it is Ideal!`
+    }else if (bmi>=25){
+        text.innerHTML = `Your bmi is: ${bmi} and it is Not Ideal!`
+        alert("OBESE")
+    }
+}
+
+    </script>
+    
+</body>
+</html>

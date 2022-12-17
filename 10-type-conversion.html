@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPE CONVERSION</title>
+</head>
+<body>
+    <h1>TYPE CONVERSION</h1>
+    
+
+    <script>
+        const lang = "JavaScript";
+        const allNums = "3456654323435454542k";
+        const str = Number(allNums);
+        const newLang = Number(lang);
+        console.log(Number(lang));// NaN = Not a Number letters cannot be converted into number variable.
+        console.log(String(newLang));// Still cannot be compiled because cannot pass the first task.
+        console.log(typeof str);
+
+        const s1 = 5;
+        const s2 = -7;
+        const name = "John";
+
+        console.log(Boolean(name));
+        console.log(Boolean(s1));
+        console.log(Boolean(s2));
+        
+        //All above returns true=== 0, null, undefined, "", Nan will be regarded as false by js only.
+        
+        const zero = 0;
+        const nal = null;
+        const undef = undefined;
+        const blank = "";
+        const NotANumber = NaN;
+
+        console.log(Boolean(zero));
+        console.log(Boolean(nal));
+        console.log(Boolean(undef));
+        console.log(Boolean(blank));
+        console.log(Boolean(NotANumber));
+
+    </script>
+</body>
+</html>

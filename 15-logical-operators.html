@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGICAL OPERATORS</title>
+</head>
+<body>
+    
+    <h1>LOGICAL OPERATORS</h1>
+
+
+
+    <script>
+        let A = 10;
+        let B = 5;
+        let C = 0;
+        let D = undefined;
+        console.log(A&&B);// if it is true&&true it returns second true value which is B = 5
+        console.log(A||B);// if it is true||true it returns first true value which is A = 10
+        console.log(A&&C);// if it is true||false it returns false value which is C = 0
+        console.log(A||C);// if it is true||false it returns true value which is A = 10
+        console.log(D||C);// if it is false||false it returns second false value which is C = 0
+        console.log(D&&C);// if it is false||false it returns first false value which is D = undefined
+
+        A = 10;
+        B = null;
+
+        console.log(!A);//false ==> This returns the opposite of boolean value of variable.
+
+        console.log(50>30&&50>70); // false
+
+        let num1 = Number(prompt("enter 1. nums"));
+        let num2 = Number(prompt("enter 2. nums"));
+        let avg = (num1+num2)/2;
+        console.log(avg);
+        alert(avg);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH STATEMENTS</title>
+</head>
+<body>
+    <input type="number" id="price" placeholder="Your price"/>
+    <button onclick="calculate()">CALCULATE</button>
+    <p class="text">Result</p>
+
+    <script>
+
+        function calculate(){
+        let price = Number(document.querySelector("#price").value);
+        let text = document.querySelector(".text");
+
+        switch(true){
+            case (price>1500):
+                price*=0.85;
+                break;
+            case (price>700):
+                price*=0.87;
+                break;
+            case (price>500):
+                price*=0.9;
+                break;    
+            case (price>300):
+                price*=0.95;
+                break;    
+            default:
+                price*=0.98;
+        }
+        text.innerHTML = `New Price is: ${price}`
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" name="" id="user">
+<button onclick="length()">Length of input</button>
+<p class="text"></p>
+
+<script>
+
+    function length(){
+        let text = document.querySelector(".text");
+        let user = document.querySelector("#user").value;
+        if(user.length > 2 && user.length < 50){
+            text.innerHTML = `Hello!`;
+        }else{
+            text.innerHTML = `ERROR!`;
+            alert("ERROR");
+            console.error("There is a problem!");
+        }
+    }
+</script>
+
+</body>
+</html>

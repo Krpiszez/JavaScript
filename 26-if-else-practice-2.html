@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="weight" placeholder="enter weight (kg)"/>
+    <input type="text" id="height" placeholder="enter height (meters)"/>
+    <button onclick="calculateBodyMass()">CALCULATE</button>
+
+    <script>
+        function calculateBodyMass(){
+            let weight = Number(document.querySelector("#weight").value);
+            let height = Number(document.querySelector("#height").value);
+
+            let bmi = weight/ height ** 2;
+
+            if(bmi > 18.5 && bmi < 25){
+                alert("Ideal");
+            }else{
+                alert("Not ideal!");
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

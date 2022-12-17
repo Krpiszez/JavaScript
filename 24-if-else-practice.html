@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1" placeholder="first">
+    <input type="text" id="num2" placeholder="second">
+    <input type="text" id="num3" placeholder="third">
+    <button onclick="profitloss()">Profit or Loss</button>
+    <p class="text"></p>
+
+    <script>
+        function profitloss(){
+            let x = Number(document.querySelector("#num1").value);
+            let y = Number(document.querySelector("#num2").value);
+            let z = Number(document.querySelector("#num3").value);
+            let avg = (x+y+z)/3;
+            let text = document.querySelector(".text");
+            if (avg > x){
+                console.log("profit");
+                alert("profit");
+                text.innerHTML = "profit";
+            }
+            else{
+                console.log("loss");
+                alert("loss");
+                text.innerHTML = "loss";
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>

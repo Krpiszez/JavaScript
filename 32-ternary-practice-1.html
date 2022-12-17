@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="price">
+    <button onclick="calculate()">Calculate</button>
+    <p class="text"></p>
+    <script>
+        function calculate(){
+            let price = Number(document.querySelector("#price").value);
+            let text = document.querySelector(".text");
+
+            let res = price>50000 ? "Best Price" : (price >20000 ? "Normal" : "Not Enough");
+
+            text.innerHTML = `Result : ${res}`;
+        }
+
+    </script>
+</body>
+</html>
