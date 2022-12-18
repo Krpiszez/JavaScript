@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+       <input type="number" id="hw2_1">
+       <select name="" id="operator">
+        <option value="">Select opt</option>
+        <option >+</option>
+        <option >-</option>
+        <option >*</option>
+        <option >/</option>
+       </select>
+       <input type="number" id="hw2_2">
+       <button onclick="calculate()">Calculate</button>
+       <p id="texthw2"> Result: </p>
+
+    <script>
+        function calculate(){
+        let operator = document.querySelector("#operator").value;
+        let firstVal = Number(document.querySelector("#hw2_1").value);
+        let secondVal = Number(document.querySelector("#hw2_2").value);
+        let res = document.querySelector("#texthw2");
+        switch (operator){
+            case "+" :
+                res.innerText = `Result of your calculation is: ${firstVal + secondVal}`;
+                alert(`Result of your calculation is: ${firstVal + secondVal}`);
+                break;
+            case "-" :
+                res.innerText = `Result of your calculation is: ${firstVal - secondVal}`;
+                alert(`Result of your calculation is: ${firstVal - secondVal}`);
+                break;
+            case "*" :
+                res.innerText = `Result of your calculation is: ${firstVal * secondVal}`;
+                alert(`Result of your calculation is: ${firstVal * secondVal}`);
+                break;
+            case "/" :
+                res.innerText = `Result of your calculation is: ${firstVal / secondVal}`;
+                alert(`Result of your calculation is: ${firstVal / secondVal}`);
+                break;    
+        }
+    }
+    </script>
+</body>
+</html>
