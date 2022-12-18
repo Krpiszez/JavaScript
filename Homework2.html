@@ -114,7 +114,13 @@
 
     function chooseHomeWork(){
         let option = document.querySelector("#searchbtn").value;
-        option === "Homework 1" ? <a class="dropdown-item" href="#div1">Homework 1</a> : option === "Homework 2" ? <a class="dropdown-item" href="#div2">Homework 2</a> : alert("No such option!");
+        option === "Homework 1" ? 
+        (`<a class="dropdown-item" href="#div1">Homework 1</a>`
+        ) : option === "Homework 2" ? 
+        (`<a class="dropdown-item" href="#div2">Homework 2</a>`
+        ) : (
+          alert("No such option!")
+          );
     }
     
     function isDivisible(){
