@@ -1,32 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        form{
-            margin: 10px;
-            background-color: blue;
-            text-align: center;
-            font-size: large;
-        }
-    </style>
-</head>
-<body>
-    <form action="">
-       <input type="number" id="rate" style="background-color: black; color: white;" placeholder="% Enter percentage">
-       <button onclick="apply()">Apply</button>
-       <p style="color: aliceblue;">Graphics Card 1000$
-        <br>
-        Monitor 400$
-        <br>
-        Keyboard 50$
-        <br>
-        Headphone 30$
-        </p>
-    </form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            li:nth-child(1) span {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
         <input type="number" placeholder="%" id="percentage" />
         <button onclick="applyDiscount()">Apply</button>
         <ul>
@@ -35,19 +20,41 @@
             <li>Keyboard <span>50</span>$</li>
             <li>Headphone <span>30</span>$</li>
         </ul>
-    
-    <script>
-        function apply(){
-        var firstPrice = 1000;
-        var secondPrice = 400;
-        var thirdPrice = 50;
-        var forthPrice = 30;
-        var firstEl = `Graphics Card ${firstPrice}$`;
-        var secondEl = `Monitor ${secondPrice}$`;
-        var thirdEl = `Keyboard ${thirdPrice}$`;
-        var forthEl = `Headphone ${forthPrice}$`;
-        let rate = Number(document.querySelector("#rate").value);
-    }
-    </script>
-</body>
+
+        <script>
+            function applyDiscount() {
+                let percentage = Number(
+                    document.querySelector("#percentage").value
+                );
+
+                // let product1 = document.querySelector("li:nth-child(1) span");
+                // let product2 = document.querySelector("li:nth-child(2) span");
+                // let product3 = document.querySelector("li:nth-child(3) span");
+                // let product4 = document.querySelector("li:nth-child(4) span");
+
+                for (let i = 1; i <= 4; i++) {
+                    let product = document.querySelector(
+                        `li:nth-child(${i}) span`
+                    );
+                    product.innerText = (
+                        product.innerText -
+                        (product.innerText * percentage) / 100
+                    ).toFixed(0);
+                }
+
+                // product1.innerText =
+                //     product1.innerText -
+                //     (product1.innerText * percentage) / 100;
+                // product2.innerText =
+                //     product2.innerText -
+                //     (product2.innerText * percentage) / 100;
+                // product3.innerText =
+                //     product3.innerText -
+                //     (product3.innerText * percentage) / 100;
+                // product4.innerText =
+                //     product4.innerText -
+                //     (product4.innerText * percentage) / 100;
+            }
+        </script>
+    </body>
 </html>
