@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DO WHILE PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>DO WHILE PRACTICE — 1</h1>
+        <script>
+            /*
+
+Q — Write a game that guesses the number between 1-100 (inclusive) chosen by the user.
+
+            */
+
+            const randomNum = Math.floor(Math.random() * (101 - 1) + 1);
+            console.log(randomNum);
+
+            let guess;
+
+            do {
+                guess = prompt("Guess a number between 0 and 101");
+
+                if (guess == randomNum) {
+                    alert("Congrats! You've guessed correctly");
+                } else if (guess > randomNum) {
+                    alert("Please guess a smaller number");
+                } else {
+                    alert("Please guess a larger number");
+                }
+            } while (guess != randomNum);
+
+            // do {
+            //     ...
+            // } while(logical statement)
+        </script>
+    </body>
+</html>

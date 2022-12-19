@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TYPE CONVERSION</title>
+    </head>
+    <body>
+        <h1>TYPE CONVERSION</h1>
+
+        <script>
+            /* when we want to convert a data type to another, we can use the following methods:
+                Boolean()
+                Number()
+                String() 
+            */
+
+            const s1 = 5;
+            const s2 = -7;
+            const name = "John";
+            console.log(Boolean(name)); // TRUE
+            console.log(Boolean(s1)); // TRUE
+            console.log(Boolean(s2)); // TRUE
+
+            const zero = 0;
+            const nal = null;
+            const undef = undefined;
+            const blank = "";
+            const NotANumber = NaN;
+
+            console.log(Boolean(zero));
+            console.log(Boolean(nal));
+            console.log(Boolean(undef));
+            console.log(Boolean(blank));
+            console.log(Boolean(NotANumber));
+
+            // Boolean returns us either TRUE or FALSE
+            // 0, null, undefined, NaN, ""(empty string) always return FALSE
+            // other than the above, always return TRUE
+
+            // if we try to convert a string that doesn't include only number values, it will return us 'NaN' => abbrv. of "Not A Number"
+            let newName = "5214512gdsdfs";
+            console.log(Number(newName)); // NaN
+            // NaN represents a value which is not a number
+
+            const money = "100";
+            console.log(money + 15); // "10015"
+            console.log(Number(money) + 15); // 115
+
+            const lang = "JavaScript";
+            console.log(Number(lang)); // NaN
+
+            const money1 = 5400;
+            console.log(money1 + 15); // 5415 — this returns as a number (added)
+            console.log(String(money1) + 15); // "540015" — this returns as a string (concatenated)
+        </script>
+    </body>
+</html>

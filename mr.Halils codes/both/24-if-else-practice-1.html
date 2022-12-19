@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF ELSE PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>IF ELSE PRACTICE — 1</h1>
+        <input type="text" id="input1" />
+        <input type="text" id="input2" />
+        <input type="text" id="input3" />
+        <button onclick="calculateProfit()">Calculate Profit</button>
+
+        <script>
+            /*Q — Write a program that receives three numbers and finds the average of them.
+
+1 – If the average is bigger than the first number, display “profit”
+2 – if not, display “loss”;*/
+
+            function calculateProfit() {
+                let num1 = Number(document.querySelector("#input1").value);
+                let num2 = Number(document.querySelector("#input2").value);
+                let num3 = Number(document.querySelector("#input3").value);
+
+                let average = (num1 + num2 + num3) / 3;
+
+                if (average > num1) {
+                    console.log("profit");
+                } else {
+                    console.log("loss");
+                }
+            }
+        </script>
+    </body>
+</html>

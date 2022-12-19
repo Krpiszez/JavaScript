@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>IF PRACTICE — 1</h1>
+        <input id="num1" type="number" />
+        <p>Result:</p>
+        <button onclick="divide()">Calculate</button>
+
+        <script>
+            /*
+            
+            Q — Write a program that receives a number and divide it to 5, as long as the received number is not 0.
+
+             */
+
+            function divide() {
+                let num1 = Number(document.querySelector("#num1").value);
+                let result = document.querySelector("p");
+                console.log(typeof num1);
+
+                if (num1 !== 0) {
+                    num1 /= 5; // num1 = num1 / 5
+                    console.log("Program enters to the if statement");
+                }
+
+                result.innerText = `Result: ${num1}`;
+            }
+        </script>
+    </body>
+</html>

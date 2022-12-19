@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const findMyAge1 = 32;
+
+            const findMyAge = (x) => {
+                return `My age is ${2022 - x}`;
+            };
+
+            console.log(findMyAge(1990));
+            console.log(findMyAge(2000));
+            console.log(findMyAge(1994));
+
+            const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+            const calculateAge = () => {
+                let birthDate = Number(
+                    prompt("Pleas enter the year of your birth")
+                );
+                let date = new Date();
+                let year = date.getFullYear();
+                let age = year - birthDate;
+                return age;
+            };
+
+            console.log(typeof calculateAge());
+           
+        </script>
+    </body>
+</html>

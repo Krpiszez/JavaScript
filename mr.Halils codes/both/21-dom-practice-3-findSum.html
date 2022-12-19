@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM EXERCISE — FIND SUM</title>
+    </head>
+    <body>
+        <h1>DOM EXERCISE — FIND SUM</h1>
+
+        <p></p>
+
+        <input id="firstNum" type="text" />
+        <input id="secondNum" type="text" />
+
+        <button onclick="findSum()">SUM</button>
+
+        <p class="result">Result:</p>
+
+        <script>
+            /* Q — Enter Two numbers into the textboxes, when the button is pressed. make the function that add  two number and displays the result in a label.*/
+
+            function findSum() {
+                // console.log("Clicked");
+                let firstNum = document.querySelector("#firstNum").value;
+                let secondNum = document.querySelector("#secondNum").value;
+                console.log(firstNum, secondNum);
+                console.log(typeof firstNum, typeof secondNum);
+                let sum = Number(firstNum) + Number(secondNum);
+                console.log(sum);
+
+                let resultText = document.querySelector(".result");
+                resultText.innerText = `Result: ${sum}`;
+            }
+        </script>
+    </body>
+</html>

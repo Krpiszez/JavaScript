@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SUBTRACTION</title>
+    </head>
+    <body>
+        <h1>SUBTRACTION</h1>
+
+        <script>
+            // If we have two different data types, one is string, one is number, for addition we convert number to string, for subtraction we convert string to number
+
+            let num1 = 20;
+            let num2 = 10;
+            console.log(num1 - num2); // 10
+
+            let year = 2022;
+            let dateOfBirth = 1980;
+            console.log(typeof dateOfBirth);
+            let age = year - dateOfBirth;
+
+            console.log(`AGE: ${age}`); // "AGE: 42"
+            console.log(`AGE: ${age - dateOfBirth}`); // "AGE: 42"
+            console.log("AGE: " + age); // "AGE: 42"
+            console.log("AGE: " + year - dateOfBirth); // NaN
+
+            /*
+            
+            steps for the last example above:
+
+            1 — "AGE: 2022" - dateOfBirth
+            2 — Number("AGE: 2022") => NaN
+            3 — NaN - dateOfBirth = NaN
+
+            */
+        </script>
+    </body>
+</html>

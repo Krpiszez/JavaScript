@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const f = () => alert("Hello!");
+        f();
+
+        var userName = "Halil";
+        const greetByName = (name) => alert(`Hello ${name}`)
+        greetByName(userName);
+
+        const add = (a,b) => a+b;
+        console.log(add(5,3));
+
+        const fct = (num) => {
+            let a = 1;
+            for(var i = num; i>0; i--)
+             {a *= i}
+              return a};
+        console.log(fct(5));
+
+    </script>
+</body>
+</html>

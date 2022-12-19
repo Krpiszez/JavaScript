@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>||, && OPERATORS</title>
+    </head>
+    <body>
+        <script>
+            // let x = 15;
+            // x == 10 && alert("x is 10");
+            // x == 10 || alert("x is not 10");
+
+            // let isUserLogin = false;
+
+            // isUserLogin || run();
+
+            // function run() {
+            //     alert("We have a problem!");
+            // }
+
+            const user = undefined;
+            alert(user ?? "Anonymous");
+
+            const newUser = null;
+            alert(
+                newUser !== null && newUser !== undefined
+                    ? newUser
+                    : "Anonymous"
+            );
+
+            let length = 10;
+            let width;
+
+            alert((length && width) ?? "Anonymous");
+        </script>
+    </body>
+</html>

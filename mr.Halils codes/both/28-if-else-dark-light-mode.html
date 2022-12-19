@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF ELSE — DARK LIGHT MODE</title>
+        <style>
+            button {
+                background-color: black;
+                color: white;
+            }
+
+            .dark {
+                background-color: black;
+                color: white;
+            }
+
+            .dark button {
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>IF ELSE — DARK LIGHT MODE</h1>
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            autem reprehenderit repellat aliquam, nesciunt in temporibus nulla
+            impedit assumenda eligendi itaque saepe veniam corporis error
+            recusandae. Nesciunt veniam ex ullam.
+        </p>
+        <p>
+            Nobis consectetur atque earum, optio fugit modi inventore et nemo
+            reiciendis voluptatem animi magni soluta dolorem. Est eos explicabo
+            quod, aliquid quaerat quae voluptatibus animi quos aspernatur ut
+            vero minima.
+        </p>
+
+        <button onclick="setMode()" id="btnMode">DARK</button>
+
+        <script>
+            /*
+        
+            Q — Make a dark-light mode switcher application
+
+            */
+            let mode = "LIGHT";
+
+            function setMode() {
+                let btnMode = document.querySelector("#btnMode");
+                let body = document.querySelector("body");
+                btnMode.innerText = mode;
+
+                if (mode === "LIGHT") {
+                    body.classList.add("dark");
+                    mode = "DARK";
+                    console.log(mode);
+                } else {
+                    body.classList.remove("dark");
+                    mode = "LIGHT";
+                    console.log(mode);
+                }
+            }
+        </script>
+    </body>
+</html>

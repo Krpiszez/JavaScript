@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOR — PRACTICE — 4 — PRODUCT LIST</title>
+    </head>
+    <body>
+        <h1>FOR — PRACTICE — 4 — PRODUCT LIST</h1>
+        <input type="number" placeholder="%" id="percentage" />
+        <button onclick="applyDiscount()">Apply</button>
+        <ul>
+            <li>Graphics Card <span>1000</span>$</li>
+            <li>Monitor <span>400</span>$</li>
+            <li>Keyboard <span>50</span>$</li>
+            <li>Headphone <span>30</span>$</li>
+        </ul>
+
+        <script>
+            /*
+Q — There is a list of products and their prices.
+Apply specific percentage of discount written inside input.
+
+Product List:
+• Graphics Card 1000 $
+• Monitor 400 $
+• Keyboard 50  $
+• Headphone 30 $
+
+            */
+
+            function applyDiscount() {
+                let percentage = Number(
+                    document.querySelector("#percentage").value
+                );
+                let product1 = document.querySelector("li:nth-child(1) span");
+                let product2 = document.querySelector("li:nth-child(2) span");
+                let product3 = document.querySelector("li:nth-child(3) span");
+                let product4 = document.querySelector("li:nth-child(4) span");
+
+                product1.innerText =
+                    Number(product1.innerText) -
+                    Number(product1.innerText) * (percentage / 100);
+                product2.innerText =
+                    Number(product2.innerText) -
+                    Number(product2.innerText) * (percentage / 100);
+                product3.innerText =
+                    Number(product3.innerText) -
+                    Number(product3.innerText) * (percentage / 100);
+                product4.innerText =
+                    Number(product4.innerText) -
+                    Number(product4.innerText) * (percentage / 100);
+            }
+        </script>
+    </body>
+</html>

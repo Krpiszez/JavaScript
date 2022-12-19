@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>COMPARISON OPERATORS</title>
+    </head>
+    <body>
+        <h1>COMPARISON OPERATORS</h1>
+
+        <script>
+            /* 
+            
+                COMPARISON OPERATORS:
+
+                Equal                   : ==  or  ===
+                Not Equal               : != or !==
+                Greater Than            : >
+                Less Than               : <
+                Greater Than or Equal   : >=
+                Less Than or Equal      : <=
+            
+            */
+
+            // Comparison operators return Boolean values; either TRUE or FALSE
+
+            // "==" or "!=" only compares VALUES
+            const num1 = 5;
+            console.log(num1 == "5"); // TRUE
+            console.log(num1 != "5"); // FALSE
+
+            // "===" or "!==" compares BOTH VALUES and DATA TYPES
+            console.log(num1 === "5"); // FALSE
+            console.log(num1 !== "5"); // TRUE
+
+
+            let sum1 = 10;
+            let sum2 = "10";
+            console.log(sum1 == sum2); // TRUE
+            console.log(sum1 === sum2); // FALSE
+
+            const num2 = 5;
+            console.log(num2 > 5);
+            console.log(num2 > "4");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ELSE IF PRACTICE — 3 — DIVISION BY THREE AND FIVE</title>
+    </head>
+    <body>
+        <h1>ELSE IF PRACTICE — 3 — DIVISION BY THREE AND FIVE</h1>
+        <input
+            type="number"
+            id="numInput"
+            placeholder="Please enter a number"
+        />
+        <button onclick="isDividedByThreeAndFive()">CALCULATE</button>
+
+        <script>
+            /*
+
+Q — Write a program with a textbox receives a number and displays if it can be divided by 3 and 5 without any remainder, and displays a message according to the result.
+
+            */
+            function isDividedByThreeAndFive() {
+                let num = Number(document.querySelector("#numInput").value);
+
+                let division3 = num % 3 === 0;
+                let division5 = num % 5 === 0;
+
+                console.log(division3, division5);
+
+                if (division3 && division5) {
+                    alert(
+                        "Number can be divided by 3 and 5 without any remainder"
+                    );
+                } else if (division3) {
+                    alert("Number can be divided by 3 without any remainder");
+                } else if (division5) {
+                    alert("Number can be divided by 5 without any remainder");
+                } else {
+                    alert("This number can neither be divided by 3 nor by 5");
+                }
+            }
+        </script>
+    </body>
+</html>

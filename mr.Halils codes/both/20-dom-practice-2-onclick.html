@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .red {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 onclick="domFunction()">DOM-2</h1>
+
+        <p onclick="changeColor()" class="text">
+            Click On Me to change the color to Red
+        </p>
+
+        <p style="color: blueviolet">Lorem ipsum dolor sit.</p>
+
+        <button onclick="alertUser()">Alert User</button>
+
+        <button onclick="greetWorld()">Show A Message</button>
+        <p id="emptyBox"></p>
+
+        <script>
+            let pText = document.querySelector(".text");
+            let h1 = document.querySelector("h1");
+            console.log(h1);
+
+            function changeColor() {
+                pText.classList.add("red");
+            }
+
+            function domFunction() {
+                console.log("Clicked!");
+                h1.style.color = "blue";
+            }
+
+            function alertUser() {
+                alert("Button works correctly");
+            }
+
+            function greetWorld() {
+                let emptyBox = document.querySelector("#emptyBox");
+                emptyBox.innerText = "Hello World!";
+            }
+        </script>
+    </body>
+</html>

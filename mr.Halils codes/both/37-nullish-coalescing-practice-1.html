@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NULLISH COALESCING — PRACTICE 1</title>
+        <style>
+            .rectangle {
+                width: 500px;
+                height: 300px;
+                border: 5px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>NULLISH COALESCING — PRACTICE 1</h1>
+        <div class="rectangle">
+            <p id="area">Area:</p>
+        </div>
+
+        <script>
+            let areaText = document.querySelector("#area");
+            let width = prompt("Please enter the width of the rectangle") ?? 5;
+            console.log(width);
+            let height =
+                prompt("Please enter the height of the rectangle") ?? 3;
+            console.log(height);
+
+            let area = Number(width) * Number(height);
+
+            areaText.innerText = `Area: ${area}`;
+        </script>
+    </body>
+</html>

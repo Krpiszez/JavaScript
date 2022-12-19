@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF ELSE PRACTICE — 4 — USER CONTROL</title>
+    </head>
+    <body>
+        <h1>IF ELSE PRACTICE — 4 — USER CONTROL</h1>
+        <input type="text" id="email" placeholder="email" />
+        <input type="text" id="password" placeholder="password" />
+        <button onclick="login()">Login</button>
+
+        <script>
+            /*
+            
+Q — Write a program with two inputs. First input takes user email, second one user password.
+
+1 – if user mail and password matches the one we have in our program, then alert the user accordingly, vice versa.
+
+*/
+            const email = "techpro@gmail.com";
+            const password = "12345";
+
+            function login() {
+                let userEmail = document.querySelector("#email").value;
+                let userPassword = document.querySelector("#password").value;
+
+                if (email === userEmail && password === userPassword) {
+                    alert("USER LOGGED IN SUCCESSFULLY");
+                } else {
+                    alert("WRONG USERNAME OR EMAIL");
+                }
+            }
+        </script>
+    </body>
+</html>

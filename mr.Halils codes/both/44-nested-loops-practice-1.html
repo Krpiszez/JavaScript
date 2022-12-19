@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NESTED LOOPS PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>NESTED LOOPS PRACTICE — 1</h1>
+        <script>
+            /*
+            
+Q — Create a program that generates the matrix of stars as shown:
+
+***********
+***********
+***********
+***********
+***********
+
+            */
+            let pattern = "";
+            const row = 5;
+            const column = 5;
+
+            for (var i = 0; i < row; i++) {
+                for (var j = 0; j < column; j++) {
+                    pattern += "*"; // pattern = pattern + "*";
+                }
+                pattern += "\n"; // pattern = pattern + "\n";
+            }
+
+            // pattern = "*****\n*****\n*****\n*****\n*****\n"
+
+            console.log(pattern);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SWITCH PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>SWITCH PRACTICE — 1</h1>
+
+        <input type="text" id="price" placeholder="price" />
+        <button onclick="calculateDiscount()">CALCULATE DISCOUNT</button>
+        <p id="text"></p>
+
+        <script>
+            /*
+Q — Write a program that receives information from a textbox:
+
+1 — if the information received is greater than 1500, apply 15% discount,
+2 – if greater than  700, applies 13% discount,
+3 – if greater than  500, applies 10% discount,
+4 – if greater than  300, applies 5% discount,
+5 – otherwise applies 2% discount and writes the result in a label.
+
+            */
+            function calculateDiscount() {
+                let price = Number(document.querySelector("#price").value);
+                let text = document.querySelector("#text");
+
+                //switch statement compares expression === case statement
+
+                switch (true) {
+                    case price > 1500:
+                        price *= 0.85; // price = price - (price * 15) / 100;
+                        break;
+                    case price > 700:
+                        price *= 0.87; // price = price - (price * 13) / 100;
+                        break;
+                    case price > 500:
+                        price *= 0.9; // price = price - (price * 10) / 100;
+                        break;
+                    case price > 300:
+                        price *= 0.95; // price = price - (price * 5) / 100;
+                        break;
+                    default:
+                        price *= 0.98; // price = price - (price * 2) / 100;
+                }
+
+                textEl.innerText = `The discounted price is ${price}`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM (DOCUMENT OBJECT MODEL)</title>
+        <style>
+            h1 {
+                background-color: antiquewhite;
+            }
+
+            .red {
+                color: red;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            #desc {
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM (DOCUMENT OBJECT MODEL)</h1>
+
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1><em>Lorem, ipsum dolor.</em></h1>
+        <a class="aTag" href="">Link Text</a>
+        <p id="desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non
+            assumenda harum tempora nesciunt, quod voluptate aspernatur aut
+            ducimus veniam, repudiandae quam fugit! Neque, porro nihil sapiente
+            ratione doloribus iste eius?
+        </p>
+
+        <p class="newP">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, at
+            laborum mollitia quaerat eaque debitis quasi pariatur ad magnam,
+            voluptatum ratione tenetur facilis provident minima voluptas tempora
+            eos quod explicabo.
+        </p>
+        <p class="newP">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi iste
+            minus sapiente voluptatibus eaque vero adipisci aspernatur eveniet
+            eius animi. Earum enim necessitatibus fugit sapiente! Maxime ratione
+            deleniti consectetur dolore.
+        </p>
+
+        <ul id="menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+
+        <script>
+            /* 
+
+                Document Object Model (DOM) represents your web page.
+
+                — To access elements, tags, classes, IDs we can use following methods, after starting with "document" object:
+                
+                    document.querySelector(selector) => returns the first element within the selector
+                    document.querySelectorAll(selector) => returns all elements in an array
+                
+                — inside the selector part, CSS selectors are used: 
+                
+                    for IDs         :   "#idName",
+                    for classes     :   ".className",
+                    for elements    :   "elementName",
+
+            */
+
+            const elH1 = document.querySelector("h1");
+            const elP = document.querySelector("#desc");
+            const myATag = document.querySelector(".aTag");
+            const elMenu = document.querySelector("#menu");
+            const allH1 = document.querySelectorAll("h1");
+
+            console.log(elH1);
+            console.log(aParaghraph);
+            console.log(myATag);
+            console.log(allH1);
+
+            elH1.innerText = "<em>Hello World This is Inner Text</em>";
+            elH1.innerHTML = "<em>This is an inner HTML</em>";
+
+            // html reads anything coming from JavaScript's innerText property as if they are just text, but for the innerHTML property, html reads it as if it is an html code block
+
+            const elNewP = document.querySelector(".newP");
+            elNewP.classList.add("red");
+            elNewP.classList.remove("red");
+
+            // we can add and remove classes from an html element by using JavaScript's "classList" property and "add" or "remove" methods
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DATA TYPES</title>
+    </head>
+    <body>
+        <h1>DATA TYPES</h1>
+
+        <script>
+            /* SIX DIFFERENT DATA TYPES: 
+            1 — STRING, 
+            2 — NUMBER, 
+            3 — BOOLEAN, 
+            4 — UNDEFINED, 
+            5 — NULL, 
+            6 — OBJECT
+
+            +
+
+            7 — BIGINT,
+            8 — SYMBOL
+
+            */
+            // BigInt (ES11-2020) and Symbol (ES6-2015) came later on
+
+            var name;
+            let name2;
+            const name3 = 5;
+
+            var surName = "This is string with double quotes"; // String
+            var surName2 = "I'm"; // String
+            var newString = "This is string with single quotes"; // String
+            var newString2 = 'I"m'; // String
+
+            var num1 = 124124124124; // Number
+            var bigIntNum = 100n; // BigInt
+            // — we only add 'n' to the end of the number to make it BigInt - abbreviation of big integer
+            var booleanType = false; // Boolean
+
+            var sum; // undefined
+            // — if we don't assign the variable we have declared to nothing, it's data type is undefined
+            const newName = undefined; // undefined
+            // — we can also manually make it undefined
+
+            var nullDataType = null; // null
+
+            // typeof operator is used to find the data type of a JavaScript variable
+            // the typeof operator always returns a string
+            console.log(typeof surName);
+            console.log(typeof surName2);
+            console.log(typeof num1);
+            console.log(typeof bigIntNum);
+            console.log(typeof booleanType);
+        </script>
+    </body>
+</html>

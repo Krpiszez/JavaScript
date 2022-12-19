@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TERNARY PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>TERNARY PRACTICE — 1</h1>
+        <input type="text" id="price" />
+        <button onclick="calculate()">CALCULATE</button>
+        <p id="text"></p>
+
+        <script>
+            /*
+Q — Get price from the user, 
+
+1 – display “Best price” if it is more than 50000,
+2 – display “Normal”, if it is between 50000 and 20000
+3 – display “Not enough” if it is lower than 20000
+
+            */
+            function calculate() {
+                let price = Number(document.querySelector("#price").value);
+
+                price > 50000
+                    ? alert("Best price!")
+                    : price > 20000
+                    ? alert("Normal price!")
+                    : alert("Not enough!");
+            }
+        </script>
+    </body>
+</html>

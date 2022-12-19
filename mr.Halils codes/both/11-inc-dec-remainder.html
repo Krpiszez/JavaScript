@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>INC DEC REMAINDER</title>
+    </head>
+    <body>
+        <h1>INC DEC REMAINDER</h1>
+        <h2>4**2 = 4<sup>2</sup> — exponentiation or power</h2>
+        <h2>4*2 = 4x2 — multiplication</h2>
+
+        <script>
+            let a = 3;
+            let b = ++a;
+            console.log(a, b);
+            /* 
+
+            These are the steps for the example above (increment sign comes before variable "a"):
+            1 — number 3 is assigned to variable "a"
+            2 — variable "a" is incremented by 1
+            3 — variable "a" (already incremented 1) is assigned to variable "b"
+            
+            */
+
+            let z = 3;
+            let k = z++;
+            console.log(k, z);
+
+            /* 
+
+            These are the steps for the example above (increment sign comes after variable "z"):
+            1 — number 3 is assigned to variable "z"
+            2 — variable "z" is assigned to variable "k"
+            3 — variable "z" is incremented by 1
+
+            */
+
+            // a += 5;
+            // a = a + 5;
+            // console.log(a);
+
+            // let b = (a = a + 1);
+            // let c = --a;
+
+            // a -= 5;
+            // a = a - 5;
+
+            // a /= 5;
+            // a = a / 5;
+
+            // a *= 5;
+            // a = a * 5;
+
+            const num = 123;
+            console.log("Last Digit: " + (num % 10));
+        </script>
+    </body>
+</html>

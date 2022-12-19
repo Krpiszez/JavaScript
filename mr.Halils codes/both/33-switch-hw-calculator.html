@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SWITCH HOMEWORK — CALCULATOR</title>
+    </head>
+    <body>
+        <h1>SWITCH HOMEWORK — CALCULATOR</h1>
+        <input type="number" id="num1" placeholder="num1" />
+        <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" placeholder="num2" />
+        <button onclick="calculate()">CALCULATE</button>
+        <p id="text">RESULT:</p>
+
+        <script>
+            /*
+Q — Create a program with two inputs, select, button and label.
+
+After clicking on button, program is expected to receive two numbers via inputs, and calculate a result with these numbers according to the operator chosen with select element.
+
+*/
+
+            function calculate() {
+                let num1 = Number(document.querySelector("#num1").value);
+                let num2 = Number(document.querySelector("#num2").value);
+                let operator = document.querySelector("#operator").value;
+                let text = document.querySelector("#text");
+
+                let result = 0;
+
+                switch (operator) {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        result = num1 / num2;
+                        break;
+                    default:
+                        console.log("There is no such thing as this operator");
+                }
+
+                // if (operator === "+") {
+                //     result = num1 + num2;
+                // } else if (operator === "-") {
+                //     result = num1 - num2;
+                // } else if (operator === "*") {
+                //     result = num1 * num2;
+                // } else if (operator === "/") {
+                //     result = num1 / num2;
+                // } else {
+                //     console.log("There is no such thing like this operator");
+                // }
+
+                text.innerText = `RESULT: ${result}`;
+            }
+        </script>
+    </body>
+</html>

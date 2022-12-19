@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MATH OBJECT</title>
+    </head>
+    <body>
+        <h1>MATH OBJECT</h1>
+        <script>
+            /*
+
+Math.random() * (max - min) + min
+          // Math.random(): takes a random decimal number between 0 - 1 
+									0 (inclusive) – 1 (exclusive)
+
+I.e if the number is gonna be between 1-100 => max=100, min=1
+          // Math.random() * (100 - 1) + 1
+          // Math.random() * 100 + 1;
+
+            */
+            let num1 = 5.8;
+            let num2 = 5.1;
+
+            // Math.floor : removes the decimal part makes it integer
+
+            // Math.floor(Math.random() * (5 - 1) + 1);
+
+            console.log(Math.floor(num1));
+            console.log(Math.ceil(num2));
+            console.log(Math.round(num1), Math.round(num2));
+
+            /*
+
+            5.0 — 5.1 — 5.2 — 5.3 — 5.4 — 5.5 — 5.6 — 5.7 — 5.8 — 5.9 — 6.0
+            floor ——————————————————————— mid ————————————————————————— ceil
+            
+            */
+        </script>
+    </body>
+</html>

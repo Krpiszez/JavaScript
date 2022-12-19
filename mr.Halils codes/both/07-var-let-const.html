@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VAR, LET, CONST</title>
+    </head>
+    <body>
+        <h1>VAR, LET, CONST</h1>
+
+        <script>
+            // THREE WAYS TO DECLARE VARIABLES AND CONSTANTS: VAR, LET, CONST
+
+            var sum = 50;
+            console.log(sum);
+            sum = 100; // we can REASSIGN variables, if they were first created (declared) with "var"
+            console.log(sum);
+
+            var sum = 500; // we can REDECLARE variables, if they were first created (declared) with "var
+            console.log(sum);
+
+            const username = "username1";
+            console.log(username);
+
+            username = "username2"; // we CANNOT REASSIGN variables, if they were first created (declared) with "const"
+            // const username = "username2"; ——> we CANNOT REDECLARE variables, if they were first created (declared) with "const"
+
+            let apple;
+            apple = 5; // we can REASSIGN variables, if they were first created (declared) with "let"
+            console.log(apple);
+
+            // let sum = 700; ——> we CANNOT REDECLARE variables, if they were first created (declared) with "let"
+        </script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LOGICAL OPERATORS</title>
+    </head>
+    <body>
+        <h1>LOGICAL OPERATORS</h1>
+
+        <script>
+            /* 
+
+                LOGICAL OPERATORS:
+
+                And     :   &&
+                Or      :   ||
+                Not     :   !
+
+
+
+                ORDER OF ALL OPERATORS:
+                
+                1 — Grouping:               "()"
+                2 — Member access:          "." or "[...]"
+                3 — Not:                    "!"
+                4 — Comparison, e.g.:       "<" , ">=" , "===" , "!=", "..."
+                5 — Logical AND:            "&&"
+                6 — Logical OR:             "||"
+            
+            */
+
+            let s2 = "mouse";
+            let s3 = "Cat";
+
+            console.log(s2 || s3); // "mouse"
+            // Boolean(s2);
+            // Boolean(s3);
+            // || operator returns us the first true variable's value
+
+            // && operator returns us the first false variable's value
+            let s4 = 0;
+            let s5 = 5;
+            console.log(s4 && s2 && s3); // 0
+            console.log(s2 && s5 && s3); // "Cat"
+
+            let s6 = true;
+            let s7 = false;
+            console.log(!s6); // false
+            console.log(!s7); // true
+
+            let A = 1;
+            let B = 11;
+            console.log(A && B && "A" && "B"); // "B"
+            console.log(A || B); // 1
+
+            A = 1;
+            B = 0;
+            console.log(A && B && "A" && null && "A"); // 0
+            console.log(A || B); // 1
+
+            A = 0;
+            B = 1;
+            console.log(A && B); // 0
+            console.log(A || B || null || undefined || "A"); // 1
+
+            A = 0;
+            B = 0;
+            console.log(A && B); // 0
+            console.log(A || B || null || "A" || undefined); // "A"
+
+            /*
+            OR operator looks for the first TRUE value.
+            Therefore, the first TRUE variable's value is returned.
+            If none of the values are TRUE, the last variable's value is returned
+            */
+
+            /*
+            AND operator looks for the first FALSE value.
+            Therefore, the first FALSE variable's value is returned.
+            If none of the values are FALSE, the last variable's value is returned
+            */
+
+            const grade1 = 50;
+            const grade2 = 60;
+            const grade3 = 60;
+            console.log(grade1 > 30 && grade1 > 70); // false
+            console.log(grade2 >= 60 && grade3 != 70); // true
+            console.log(grade3 < 100 || grade2 > 80); // true
+            console.log(grade1 + grade2 < grade3 || grade1 < 50); // false
+            console.log(grade1 < 30 || (grade2 > 50 && grade3 == 70)); // false
+        </script>
+    </body>
+</html>
