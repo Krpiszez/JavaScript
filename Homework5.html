@@ -27,6 +27,15 @@
         Headphone 30$
         </p>
     </form>
+        <input type="number" placeholder="%" id="percentage" />
+        <button onclick="applyDiscount()">Apply</button>
+        <ul>
+            <li>Graphics Card <span>1000</span>$</li>
+            <li>Monitor <span>400</span>$</li>
+            <li>Keyboard <span>50</span>$</li>
+            <li>Headphone <span>30</span>$</li>
+        </ul>
+    
     <script>
         function apply(){
         var firstPrice = 1000;
@@ -38,9 +47,6 @@
         var thirdEl = `Keyboard ${thirdPrice}$`;
         var forthEl = `Headphone ${forthPrice}$`;
         let rate = Number(document.querySelector("#rate").value);
-        
-        
-        
     }
     </script>
 </body>

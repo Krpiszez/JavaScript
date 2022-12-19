@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Extract number from string
+    </title>
+</head>
+  
+<body >
+    <div align="center" style="background-color: green;">
+          
+        <h1>GeeksforGeeks</h1>
+          
+        <p>String is "jhkj7682834"</p>
+          
+        <p id="GFG">
+            Click the button to extract number
+        </p>
+          
+        <input type="button" value="click " onclick="myGeeks()">
+    </div>
+      
+    <script>
+        function myGeeks() {
+            var str = "jhkj7682834";
+            var matches = str.match(/(\d+)/);
+              
+            if (matches) {
+                document.getElementById('GFG').innerHTML
+                        = matches[0];
+            }
+        }
+    </script>
+</body>
+</html>
