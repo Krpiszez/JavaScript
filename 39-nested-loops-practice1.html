@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">a</p>
+    <script>
+        let col = 5;
+        let row = 5;
+        let str = "";
+        for(var i =0; i< col; i++){
+            for (var k =0; k<row; k++){
+                str+="*";
+            }
+            str = str + "\n";
+        }
+        document.querySelector("#p").innerText = str;
+        console.log(str);
+        alert(str);
+        
+        
+    </script>
+</body>
+</html>

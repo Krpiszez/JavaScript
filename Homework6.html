@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 10px;
+            background-color: blue;
+            text-align: center;
+            font-size: large;
+            border-inline-color: yellow;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+       <p style="color: aliceblue;" id="text">
+        a
+        </p>
+    </form>
+    <script>
+        let text = document.querySelector("#text");
+        let row = 5
+        let str = "";
+        let space = " ";
+        for(var i = 0; i<row; i++){
+            for(var j = i; j>0; j--){
+                str = str + space;
+            }
+            for (var k = i; k==i; k++){
+                str+="*";
+            }
+            str += "\n";
+        }
+        text.innerText = str;//it doesnt accept space as value when it comes to changing text
+        console.log(str);//but it works fine here in console.
+        
+    </script>
+</body>
+</html>

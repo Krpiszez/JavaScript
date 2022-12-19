@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 10px;
+            background-color: blue;
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+       <input type="number" id="rate" style="background-color: black; color: white;" placeholder="% Enter percentage">
+       <button onclick="apply()">Apply</button>
+       <p style="color: aliceblue;">Graphics Card 1000$
+        <br>
+        Monitor 400$
+        <br>
+        Keyboard 50$
+        <br>
+        Headphone 30$
+        </p>
+    </form>
+    <script>
+        function apply(){
+        var firstPrice = 1000;
+        var secondPrice = 400;
+        var thirdPrice = 50;
+        var forthPrice = 30;
+        var firstEl = `Graphics Card ${firstPrice}$`;
+        var secondEl = `Monitor ${secondPrice}$`;
+        var thirdEl = `Keyboard ${thirdPrice}$`;
+        var forthEl = `Headphone ${forthPrice}$`;
+        let rate = Number(document.querySelector("#rate").value);
+        
+        
+        
+    }
+    </script>
+</body>
+</html>

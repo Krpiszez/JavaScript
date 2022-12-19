@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FOR LOOP PRACTICE</h1>
+
+    <script>
+        let div3 = 0;
+        let div7 = 0;
+        let divBoth = 0;
+        let startPoint = 500;
+        let ceilPoint = 1001;
+        for(let i = startPoint; i < ceilPoint; i++){
+            if(i%3===0 && i%7===0){
+                divBoth++;
+                div3++;
+                div7++;
+            }else if(i%3===0 && i%7!==0){
+                div3++;
+            }else if(i%7===0 && i%3!==0){
+                div7++;
+            }
+        }
+        alert (`${div3} Numbers can be divided by 3 between 500 and 1000
+${div7} Numbers can be divided by 7 between 500 and 1000
+${divBoth} Numbers can be divided both by 3 and 7 between 500 and 1000`);
+
+// for(let i = startPoint; i < ceilPoint; i++){
+//             if(i%3===0 && i%7===0){
+//                 divBoth++;
+//             }if(i%3===0 && i%7!==0){
+//                 div3++;
+//             }if(i%7===0 && i%3!==0){
+//                 div7++;
+//             }
+//         }
+        
+
+    </script>
+</body>
+</html>

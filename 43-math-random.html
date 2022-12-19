@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let num1 = 5.8;
+        let num2 = 5.1;
+        Math.floor();//This method removes the decimal part, even it is 5.9 it returns 5.
+        Math.ceil();//This method also removes the decimal part but round it up to ceil value even it is 5.1 it returns 6.
+        Math.round();//This method also removes the decimal but it rounds to the closest integer 5.1 = 5 , 5.6 = 6
+        console.log(Math.floor(num1));//5
+        console.log(Math.ceil(num1));//6
+        console.log(Math.round(num1));//6
+        console.log(Math.round(num2));//5
+        //5(floor)------(round)-------5.5------(round)-------6(ceil)
+        console.log(Math.floor(Math.random() * (10-1)+1));//Random integer between 1-10
+
+        console.log(Math.random());
+        console.log(Math.random() * (100-1) +1);
+        console.log(Math.random() * 100 +1);
+    </script>
+</body>
+</html>
