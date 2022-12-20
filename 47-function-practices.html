@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        const checkDiv = (a,b) => {
-            let counter = 0;
-            for(var i = 1; i<a; i++){
-                if(i%b==0){
-                    counter++;
-                }
-            }
-            return `${counter} numbers are divisible to ${b} by ${a}`
-        }
-        console.log(checkDiv(70,12));
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FUNCTIONS PRACTICE — 6</title>
+    </head>
+    <body>
+        <h1>FUNCTIONS PRACTICE — 6</h1>
 
-        const isPrime = (num) => {
-            let prime = true;
-            for (var i = 2; i<num; i++){
-                if (num % i == 0){
-                    prime = false;
+        <script>
+            const userNum = Number(prompt("Please enter a positive number"));
+
+            const isPrime = (num) => {
+                let isPrime = true;
+
+                if (num === 1) {
+                    console.log("1 is neither prime nor composite number");
+                } else if (num > 1) {
+                    for (let i = 2; i < num; i++) {
+                        if (num % i === 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+
+                    if (isPrime) {
+                        console.log(`${num} is a prime number`);
+                    } else {
+                        console.log(`${num} is not a prime number`);
+                    }
+                } else {
+                    console.log(
+                        "The number you have given is not a prime number"
+                    );
                 }
-            }
-            return prime;
-        } 
-        console.log(isPrime(17));
-    </script>
-</body>
+
+                return isPrime;
+            };
+
+            isPrime(userNum);
+        </script>
+    </body>
 </html>
