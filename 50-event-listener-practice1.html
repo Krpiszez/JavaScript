@@ -7,27 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="in1">
+    <!-- <input type="text" name="" id="in1">
     <input type="text" name="" id="in2">
-    <button id="btn">Click</button>
+    <button id="btn">Click</button> -->
+
+    <label for="grade1">Grade 1</label>
+    <input type="number" id="grade1" />
+    <label for="grade2">Grade 2</label>
+    <input type="number" id="grade2" />
+    <button id="btnAverage">Get Average</button>
     
-    <script>
-        document.querySelector("#btn").onclick = () => {
-            let num1 = Number(document.querySelector("#in1").value);
-            let num2 = Number(document.querySelector("#in2").value);
-            let avg = (num1 + num2) / 2;
-            if (avg >=90 && avg<=100){
-                alert("A");
-            }else if(avg >=80 && avg<90){
-                alert("B");
-            }else if(avg >=70 && avg<80){
-                alert("C");
-            }else if(avg >=50 && avg<70){
-                alert("D");
-            }else {
-                alert("F");
-            }
-        }
+    <script src="./assets/js/50-event-listener-practice1.js">
+        // document.querySelector("#btn").onclick = () => {
+        //     let num1 = Number(document.querySelector("#in1").value);
+        //     let num2 = Number(document.querySelector("#in2").value);
+        //     let avg = (num1 + num2) / 2;
+        //     if (avg >=90 && avg<=100){
+        //         alert("A");
+        //     }else if(avg >=80 && avg<90){
+        //         alert("B");
+        //     }else if(avg >=70 && avg<80){
+        //         alert("C");
+        //     }else if(avg >=50 && avg<70){
+        //         alert("D");
+        //     }else {
+        //         alert("F");
+        //     }
+        // }
+        
         
     </script>
 </body>
