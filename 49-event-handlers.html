@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- event handlers=> first you create and event then throw it then listen and then catch
+     -->
+     <h1>Event Handling</h1>
+     <button onclick="onClick1()">Button 1</button><!-- when you clicke here event handler is triggered and function works
+                                                        Here onclick1() is event listener-->
+
+    <button id="btn2">Button 2</button>
+
+    <button id="btn3">Button 3</button>
+
+    <button id="btn4">Button 4</button>
+
+    <button id="btn5">Button 5</button>
+</body>
+
+
+<script>
+
+    // There are 3 different head topics 
+    // 1. with the thing we did at first create and call method
+    // 2. onclick with dom
+    // 3. .addEventListener() method with dom 
+
+    const onClick1 = () => console.log("Button 1 is clicked"); // Here onClick1() is event listener
+
+
+    const onClick2 = () => console.log("Button 2 is clicked");
+    document.querySelector("#btn2").onclick = onClick2; // Here is another way to handle event in js
+
+    document.querySelector("#btn3").onclick = function () {
+        console.log("Button 3 is clicked");             //  This is way to do it with traditional method
+    };
+
+    document.querySelector("#btn4").onclick = (e) => {console.log("Button 4 is clicked"); alert(e)}; // Here e is convenient it can be any value or empty?
+    // we will need that parameter with some methods - attributes we will see later (like e.target)
+    
+    document.querySelector("#btn5").addEventListener("click", onClick5); // Here is another way with using addEventListener method.
+    function onClick5(e){                                                // accept 2 parameters second parameter can be method itself.
+        console.log("Button 5 is clicked");
+    }
+
+    //document.querySelector("#btn5").addEventListener("click", onClick5 = () => {console.log("Button 5 is clicked");}) // same with above not preferable
+
+
+
+</script>
+</html>
