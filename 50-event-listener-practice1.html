@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="in1">
+    <input type="text" name="" id="in2">
+    <button id="btn">Click</button>
+    
+    <script>
+        document.querySelector("#btn").onclick = () => {
+            let num1 = Number(document.querySelector("#in1").value);
+            let num2 = Number(document.querySelector("#in2").value);
+            let avg = (num1 + num2) / 2;
+            if (avg >=90 && avg<=100){
+                alert("A");
+            }else if(avg >=80 && avg<90){
+                alert("B");
+            }else if(avg >=70 && avg<80){
+                alert("C");
+            }else if(avg >=50 && avg<70){
+                alert("D");
+            }else {
+                alert("F");
+            }
+        }
+    </script>
+</body>
+</html>
