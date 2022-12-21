@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Arrays are alike objects they are declared with [] it uses indexes as general. Also thereis another way to create an array'
+        // let courses = new Array(....., .....); arrays and objects accept different data types. But in object it must be key: value.
+        // an array element can be accessed by ==> arrayName[index];
+        // length of arrays ==> arrayName.length; length property
+        // first element ==> arrayName[0], last element ==> arrayName[arrayName.length - 1];
+        // to update an array element syntax is same as Java arrayName[0] = ...;
+
+        const nums = [24, 45, 84, "fifty"];
+        alert(nums);
+        nums[3] = 50;
+        alert(nums);
+        let sum = 0;
+        for (var i =0; i<nums.length; i++){
+            sum+=parseInt(nums[i]);
+        }
+        alert(sum);
+
+        // same logic in objects is applied when it comes to set the elements. Array itself cant be updated but its elements can be.
+
+
+
+    </script>
+</body>
+</html>

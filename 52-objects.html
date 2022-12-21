@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const car = {               //There are 6 different data types 5 data types are primitive (string, boolean, number, undefined, null)
+            brand : "Mercedes",     //Object is the 6. data type and it is called reference data types.
+            model : "S500",
+            color : "Beige",
+            type : "Automatic",
+        };
+
+
+        let x = 10;
+        let y = x;
+        x=5;
+
+        console.log(y); // 10 it wont change with last update on x.
+
+        let obj = {
+            type : "string",
+            name : "string2",
+        }
+
+        let newObj = obj;       //Here the value will be changed with the first one. it take the object as a reference point.
+
+        obj.type = "boolean";
+
+        console.log(newObj.type); // it will be changed in to boolean
+
+
+        const someObject = { // Here because it is const it actually shouldnt be updated but if we think it like map the keys are regarded as const
+            brand : "Mercedes", // which means we can update only values. mercedes s500 beige and automatic can be accessed like someObject.brand
+            model : "S500",         // then can be updated as wanted.
+            color : "Beige",
+            type : "Automatic",
+        };
+
+        
+
+    </script>
+</body>
+</html>
