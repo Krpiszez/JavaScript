@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        1- Mutator Methods are used to make a chance in arrays
+        .push() method add an element to end of an array used with parameter
+        .pop() method removes the item in the end from an array
+        .shift() method removes first element of an array
+        .unshift() method adds a new element to beginning of an array used with parameter
+        .reverse() method is used to change the order of the items of an array
+        .splice() method can be used to add any element to specified index in array array.splice(index, howManyElement, element1, element2 ...)
+        */
+        const fruits = ["Apple", "Pear", "Banana", "Kiwi"];
+        fruits.pop(); //["Apple", "Pear", "Banana"];
+        fruits.push("PineApple"); //["Apple", "Pear", "Banana", "PineApple"];
+        fruits.shift(); // ["Pear", "Banana", "PineApple"];
+        fruits.unshift("Strawberry"); //["Strawberry", "Pear", "Banana", "PineApple"];
+        fruits.reverse(); // ["PineApple", "Banana", "Pear", "Strawberry"];
+        fruits.splice(1,0,"Cherry"); // ["PineApple", "Cherry", "Banana", "Pear", "Strawberry"]; Here slice method works first parameter as index and second
+                                     //  item how many to be removed and then add the other parameters to array.
+        console.log(fruits);
+        /*
+        2- Access Methods are used to access the items of arrays
+        3- Iterator Methods are used to operate on each array items
+
+        */
+    </script>
+</body>
+</html>
