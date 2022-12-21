@@ -54,7 +54,7 @@ const convertNumberToLetter = (num) => {
     let letter;
 
     if (num >= 90 && num <= 100) letter = "A"
-    else if (num >= 80 && num < 90) letter = "B"
+    else if (num >= 80 && num < 90) letter = "B"        
     else if (num >= 70 && num < 80) letter = "C"
     else if (num >= 50 && num < 70) letter = "D"
     else letter = "F"
