@@ -5,10 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul{
+            list-style-image: url('sqpurple.gif');
+            list-style-position: outside;
+            padding: 20px;
+            height: fit-content;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
 
-    <input type="text" name="" id="">
+    <input style="background-color: black; color: white;" placeholder="Enter a city to add" type="text" id="city">
+    <button style="color: lightblue; background-color: darkblue;" id="btnAdd">Add City</button>
+    <div style="margin-top: 10px;">
+        <button style="color: lightblue; background-color: darkblue;" id="btnSort">Sort</button>
+        <button style="color: lightblue; background-color: darkblue;" id="btnReverse">Reverse</button>
+        <button style="color: lightblue; background-color: darkblue;" id="btnRemoveFirst">Remove First</button><br>
+        <button style="color: lightblue; background-color: darkblue; margin-top: 10px;" id="btnRemoveLast">Remove Last</button>
+        <button style="color: lightblue; background-color: darkblue;" id="btnRemoveAll">Remove All</button>
+        <button style="color: lightblue; background-color: darkblue;" id="btnMix">Mix</button>
+    </div>
+
+    <ul id="cityList" style="background-color: red; color: aqua; text-align: center; border: black solid;"><li>aa</li></ul>
+    
 
     <script src="/assets/js/57-practicing.js">
     </script>
