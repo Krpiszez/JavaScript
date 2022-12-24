@@ -41,7 +41,7 @@
         */
        const animals = ["Elephant", "Bird", "Mouse", "Bird", "Cat", "Bird"];
        const letters = ["a", "b", "c", "d", "e", "f", "g"];
-       const numbers = [1,2,3,4,5,6,-5,-4,-8,-7];
+       const numbers = [5,-8,53,76,14,-6,-71,45];
        const concattedArray = letters.concat(numbers, 7,8,9); // Here you can add any variable in parenthesis => String, array, number ...
        console.log(concattedArray); // 
        const slicedArray = concattedArray.slice(5,11);
@@ -98,8 +98,10 @@
        console.log(resPos);
        let resNeg = negative.reduce((total, item) => total + item, 0);
        console.log(resNeg);
-       let res = resPos - resNeg;
+       let res = resPos + resNeg;
        console.log(res);
+
+       
     </script>
 </body>
 </html>
