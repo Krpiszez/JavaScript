@@ -37,9 +37,21 @@
         .lastIndexOf() method returns the last position (index) of element. returns -1 if not exist
         .toString() method makes array a String
         .slice() returns a sub array between given indices
-        .join() 
+        .join() method merges all array items and return string
+        */
+       const animals = ["Elephant", "Bird", "Mouse", "Bird", "Cat", "Bird"];
+       const letters = ["a", "b", "c", "d", "e", "f", "g"];
+       const numbers = [1,2,3,4,5,6];
+       const concattedArray = letters.concat(numbers, 7,8,9); // Here you can add any variable in parenthesis => String, array, number ...
+       console.log(concattedArray); // 
+       const slicedArray = concattedArray.slice(5,11);
+       console.log(slicedArray); // [f,g,1,2,3,4];
+       const joinedArray = concattedArray.join("--"); // join method add the argument between elements of array here
+       console.log(joinedArray);
 
+        /*
         3- Iterator Methods are used to operate on each array items
+        .for() method can be used to iterate over array element (for loop)
 
         */
     </script>
