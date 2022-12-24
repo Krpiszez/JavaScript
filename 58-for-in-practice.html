@@ -12,11 +12,21 @@
         const fNames = ["Sauron", "Frodo", "Galadriel", "Aragorn", "Gandalf"];
        const lNames = ["Mordor", "Shire", "Valinor", "Rivendell", "Valinor"];
 
+       const mergeNames = (arr1, arr2) => {
+        let mergedNames = [];
+
+        for(let index in arr1){
+            mergedNames[index] = `${arr1[index]} of ${arr2[index]}`;
+        }
+        return mergedNames;
+       }
+       console.log(mergeNames(fNames, lNames));
+
        let concattedNames = [];
        for (let index in fNames){
         for (let ind in lNames){
             if(index==ind){
-                concattedNames = concattedNames.concat(fNames[index]," of " ,lNames[ind])
+                concattedNames = concattedNames.concat(`${fNames[index]} of ${lNames[ind]}`);
             }
         }
        }
