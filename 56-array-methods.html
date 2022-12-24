@@ -41,7 +41,7 @@
         */
        const animals = ["Elephant", "Bird", "Mouse", "Bird", "Cat", "Bird"];
        const letters = ["a", "b", "c", "d", "e", "f", "g"];
-       const numbers = [1,2,3,4,5,6];
+       const numbers = [1,2,3,4,5,6,-5,-4,-8,-7];
        const concattedArray = letters.concat(numbers, 7,8,9); // Here you can add any variable in parenthesis => String, array, number ...
        console.log(concattedArray); // 
        const slicedArray = concattedArray.slice(5,11);
@@ -51,9 +51,55 @@
 
         /*
         3- Iterator Methods are used to operate on each array items
-        .for() method can be used to iterate over array element (for loop)
-
+        for() method can be used to iterate over array element (for loop)
+        for(in) method is shorter version of for. No need to type length or increment part (kinda for-each loop) returns index of each element
+        for(of) can be used to work on different data types same as in but returns element itself
+        .forEach() similar to for of but only can be used with arrays
+        .map() method iterates over an array make updates returns a copy of array
+        .filter() method is used to filteration (to pick some elements we need with specific attributes).
+        .reduce() method same as Java lambda it is usually used for math operation in array elements (by iterating and reducing their numbers(length)) 
         */
+       const number = [1, 2, 3, 4, 5, 6];
+
+       for (let i =0; i<number.length; i++){
+
+       }
+       for (let index in numbers){
+        console.log(index); //returns indices
+       }
+       for (let item of numbers){
+        console.log(item); //returns elements
+       }
+       number.forEach((index, item) => {
+        console.log(item,index); //returns elements and indices
+       })
+       const mappedAnimals = animals.map((animal, index) => {
+        return animal + " " + index;
+       }) 
+       console.log(animals);
+       console.log(mappedAnimals);
+       const filteredArray = numbers.filter((number, index) => {
+        return number > 4;
+       });
+       console.log(filteredArray);
+
+       const reducedNumbers = numbers.reduce((total, item) => total + item, 0); // syntax for reduce
+       console.log(reducedNumbers);
+
+       const positive = numbers.filter(number => {
+        return number > 0;
+       })
+       console.log(positive)
+       const negative = numbers.filter(number => {
+        return number < 0;
+       })
+       console.log(negative)
+       let resPos = positive.reduce((total, item) => total + item, 0);
+       console.log(resPos);
+       let resNeg = negative.reduce((total, item) => total + item, 0);
+       console.log(resNeg);
+       let res = resPos - resNeg;
+       console.log(res);
     </script>
 </body>
 </html>
