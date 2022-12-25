@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const myArr = [-5, 24, -13, 7, 3];
+
+            const mul5 = (arr) => {
+                arr.forEach((item, index) => {
+                    arr[index] = item * 5;
+                });
+            };
+
+            mul5(myArr);
+            console.log(myArr);
+        </script>
+    </body>
+</html>

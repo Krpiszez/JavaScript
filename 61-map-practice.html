@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const names = ["Alex", "John", "Hagrid", "Aragorn", "Jack", "Galadriel"];
+        const toUpper = (name) => {
+            return name.toUpperCase();
+        }
+        const capitalName = names.map(toUpper);
+        console.log(capitalName);
+
+        const priceList = [100,150,300,50,80];
+
+        const mthd = (price) => {
+            if(price > 100){
+                price *=1.1
+            }else {
+                price *=1.15
+            }
+            return Math.round(price);
+        }
+
+        const newPrices = priceList.map(mthd);
+        console.log(newPrices);
+    </script>
+</body>
+</html>

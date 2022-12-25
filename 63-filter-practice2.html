@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const coordinates = [
+                -100,
+                150,
+                -32,
+                43,
+                -20
+            ];
+
+            const toPos = (coords) =>{
+                if (coords < 0){
+                    return Math.abs(coords);
+                }else {
+                    return coords;
+                }
+            }
+
+            const newCoords = coordinates.map(toPos);
+            console.log(newCoords);
+
+            const Coordinates = [
+                -100,
+                150,
+                -32,
+                43,
+                -20
+            ];
+
+            const sol = Coordinates.filter((coord) => coord < 0).map((coord) => Math.abs(coord));
+            sol.forEach((coord) => console.log(coord));
+            console.log(sol);
+
+        </script>
+    </body>
+</html>

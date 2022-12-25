@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const individuals = [
+                "Alex",
+                "John",
+                "Hogr",
+                "Kamal",
+                "Jack",
+                "Power",
+            ];
+
+            const filteredArrayByFirstLetter = (letter, arr) => {
+                const firstLetter = letter.toUpperCase();
+                const filteredArray = arr.filter((item) => {
+                    return item.startsWith(firstLetter);
+                });
+                return filteredArray;
+            };
+
+            console.log(filteredArrayByFirstLetter("a", individuals));
+        </script>
+    </body>
+</html>
