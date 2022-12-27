@@ -12,6 +12,17 @@
     <script>
         // .reduce() method iterates over array and return the result of operation. Also .reduce()
         // method accept 3 parameters 1 sum container(result) 2 every array item 3 current index num => 1. + 2. , first value 
+
+        const salaries = [3000, 2891, 3500, 4200, 7000, 2500];
+
+        const newSalaries = salaries
+        .filter((salary) => salary < 3000)
+        .map((salary) => salary*1.1)
+        .reduce((total, item) =>{
+            return total + item;
+        }, 0);
+        console.log(newSalaries);
+
     </script>
 </body>
 </html>
