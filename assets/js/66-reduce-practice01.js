@@ -11,3 +11,11 @@ const loadCountries = () => {
 }
 
 loadCountries();
+
+const totalArea = countries.reduce((total, country) => {
+    return total + country.area;
+},0);
+
+document.querySelector("#totalArea").innerHTML = totalArea;
+
+alert(totalArea);
