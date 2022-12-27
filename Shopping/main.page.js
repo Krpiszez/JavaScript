@@ -1,27 +1,20 @@
-const items = [
-    "Apple",
-    "Melon",
-    "Banana",
-    "Strawberry"
-]
+const btn = document.getElementById("submitBtn");
 
-const addItem = () => {
-    let item = document.getElementById("q1i1").value;
-    if (items.includes(item) || item == null) return;
-    items.push(item);
-    displayItems();
+let balance = 1000;
+
+
+
+
+
+const text = document.getElementById("afterTransactionMessage");
+
+const funct = () => {
+    const amount = Number(document.getElementById("atmInput").value);
+    const choice = document.getElementById("menu").appendChild("option");
+    console.log(choice.value);
+    balance+=amount;
+    text.innerHTML = `Your balance is: ${balance}`
+    
 }
-document.getElementById("q1b2").addEventListener("click", addItem);
-
-const displayItems = () => {
-    let html = "";
-    let list1 = document.getElementById("q1l1");
-    for (var i = 0; i<items.length; i++){
-        html += `<li>${items[i]}</li>`;
-    }
-    list1.innerHTML = html;
-}
-
-document.getElementById("q1b1").addEventListener("click", displayItems);
-
+btn.addEventListener("click", funct);
 
