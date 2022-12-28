@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM-ACCESS_METHODS</title>
+    </head>
+    <body>
+
+        <header><h1 id="hello">Hello JS</h1></header>
+        
+        <main>
+        <p id="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, impedit.</p>
+            <ul class="list">
+                <li><a href="https://google.com">Lorem.</a></li>
+                <li><a href="">Illo?</a></li>
+                <li><a id="x" href="">Similique?</a></li>
+                <li><a href="">Distinctio!</a></li>
+                <li><a href="">Perferendis.</a></li>
+            </ul>
+        </main>
+   <script>
+    const listClass = document.querySelector(".list");
+    console.log(listClass.children);
+    console.log(listClass.lastElementChild.innerHTML);
+    console.log(listClass.parentElement.parentElement);
+    console.log(document.getElementById("x").parentElement.nextElementSibling.children[0].innerHTML);
+    </script>
+    </body>
+</html>
