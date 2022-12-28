@@ -18,4 +18,6 @@ const totalArea = countries.reduce((total, country) => {
 
 document.querySelector("#totalArea").innerHTML = totalArea;
 
+document.getEleme
+
 alert(totalArea);
