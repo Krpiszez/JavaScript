@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas officia temporibus facilis ea dolorum excepturi voluptate consequatur cupiditate deleniti dolorem.</p>
+    <p id="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas officia temporibus facilis ea dolorum excepturi voluptate consequatur cupiditate deleniti dolorem.</p>
     <button id="btnAdd">Add</button>
     <button id="btnRemove">Remove</button>
     <button id="btnToggle">Toggle</button>
@@ -29,7 +29,24 @@
     <button id="btnReplace">Replace</button>
 
     <script>
-
+        const message = document.getElementById("message");
+        document.getElementById("btnAdd").addEventListener("click", ()=>{
+            message.classList.add("red", "blue");
+        })
+        document.getElementById("btnRemove").addEventListener("click", ()=>{
+            message.classList.remove("blue");
+        })
+        document.getElementById("btnToggle").addEventListener("click", ()=>{
+            message.classList.toggle("black");
+        })
+        // if(message.classList.contains("black")){
+        //     message.classList.remove("black");
+        // }else{
+        //     message.classList.toggle("black");
+        // }
+        document.getElementById("btnReplace").addEventListener("click", ()=>{
+            message.classList.replace("blue", "red");
+        })
     </script>
 </body>
 </html>

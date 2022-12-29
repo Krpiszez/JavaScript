@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputText">
+    <button id="btnAdd">Add</button>
+    <button id="btnAddToTop">Add To Top</button>
+    <button id="btnDelete">Delete</button>
+    <ul id="list">
+        <li>Lorem.</li>
+        <li>Quis?</li>
+        <li>Deserunt!</li>
+        <li>Consequuntur?</li>
+        <li>Alias!</li>
+    </ul>
+
+
+    <script>
+        const listEl = document.getElementById("list");
+        const inputText = document.getElementById("inputText");
+        const btnAdd = document.getElementById("btnAdd");
+        const btnAddToTop = document.getElementById("btnAddToTop");
+        btnAdd.addEventListener("click", () =>{
+            const newList = document.createElement("li")
+            newList.innerHTML = inputText.value;
+            listEl.appendChild(newList);
+        })
+
+        btnAddToTop.addEventListener("click", ()=>{
+            const newList = document.createElement("li");
+            newList.innerHTML = inputText.value;
+            listEl.prepend(newList);
+        })
+        
+        const btnDelete = document.getElementById("btnDelete");
+        btnDelete.addEventListener("click", () =>{
+            listEl.querySelector("li:last-child").remove();
+        })
+
+    </script>
+</body>
+</html>

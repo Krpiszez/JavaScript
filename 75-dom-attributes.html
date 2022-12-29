@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="text" id="inputText">
+    <button id="btnCheck" disabled>Check</button>
+
+    <script>
+        
+        const inp = document.getElementById("inputText");
+        inp.addEventListener("input", (e)=>{
+            const btn = document.getElementById("btnCheck");
+            const enteredText = e.target.value;
+            if(enteredText.length >= 8){
+                btn.removeAttribute("disabled");
+            }
+        })
+    </script>
+</body>
+</html>
