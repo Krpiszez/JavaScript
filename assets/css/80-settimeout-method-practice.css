@@ -1,0 +1,36 @@
+nav.menu{
+    background-color: aquamarine;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50px;
+    transition: top 0.5s;
+}
+main{
+    padding-top: 3rem;
+}
+
+nav.menu ul{
+    display: flex;
+    list-style-type:none ;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 50px;
+}
+nav.menu .switch{
+
+    background-color: rgb(255, 225, 0);
+    text-align: center;
+    padding: 0.3rem;
+    /* cursor: pointer; add after */
+}
+nav.menu ul a{
+    text-decoration: none;
+    color: black;
+}
+
+nav.menu.opened{
+    top: 0;
+}
