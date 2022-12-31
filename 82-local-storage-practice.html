@@ -14,7 +14,14 @@
 
 
     <script>
-       
+       const handleCounter = () => {
+        let counter = localStorage.getItem("pageCounter");
+        counter ?? 0 ;//nullish operator if it is null it will be set the second value otherwise first remain.
+        counter++;
+        localStorage.setItem("pageCounter", counter);
+        document.getElementById("message").innerHTML = `User visited this page ${counter} times.`
+       }
+       handleCounter();
     </script>
 </body>
 </html>
