@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="./assets/css/80-settimeout-method-practice.css">
 </head>
 <body>
+    <h1 id="welcome"></h1>
+
     <h2 id="message"></h2>
+
+    <form action="">
+      <input type="text" name="" id="inputText">
+      <button id="btnSave">Save</button>
+    </form>
 
 
 
@@ -22,6 +29,21 @@
         document.getElementById("message").innerHTML = `User visited this page ${counter} times.`
        }
        handleCounter();
+
+       document.getElementById("btnSave").addEventListener("click", (e)=>{
+        e.preventDefault();
+        const name = document.getElementById("inputText").value;
+        name ?? "" ;
+        localStorage.setItem("name", name);
+
+        handleWelcomeMessage();
+       })
+
+       const handleWelcomeMessage = () => {
+        let name = localStorage.getItem("name");
+        document.getElementById("welcome").innerHTML = `Welcome ${name}`;
+       }
+       
     </script>
 </body>
 </html>
