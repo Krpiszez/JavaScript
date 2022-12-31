@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const students = {
+            firstname:"John",
+            lastname:"Smith",
+            age:24
+        }
+        const note = `${students.firstname} ${students.lastname} is ${students.age} years old.`
+        console.log(note);
+        const firstname = students.firstname;
+        const lastname = students.lastname;
+        const age = students.age;
+        const betterNote = `${firstname} ${lastname} is ${age} years old.` // Here this is code destruction we make the code simplier.
+        console.log(betterNote)
+    </script>
+</body>
+</html>

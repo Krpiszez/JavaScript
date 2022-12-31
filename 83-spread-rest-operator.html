@@ -22,6 +22,15 @@
             console.log(`${name} ${surname} has an average of ${(avg/scores.length).toFixed()}`)
         }
         average("Omar","Gomar", 73, 90, 57 );
+
+        const numbers = [12,23,34,45];
+        const nums = [32,42,12,54];
+        const nums2 = [...numbers,...nums]
+
+        const sumSpread = (a, b) => {
+            return a+b;
+        }
+        console.log(sumSpread(nums2, 23));
     </script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const students = {
+            firstname:"John",
+            lastname:"Smith",
+            age:24
+        }
+        console.log(students)
+
+        const s1 = students;//when you update main object this will be effected.
+        console.log(s1.firstname);
+        students.firstname = "Jerry";
+        console.log(s1.firstname)
+        console.log(students.firstname)
+
+        const s2 = {...students, lastname:"Gomar", age:42, no : 1};//shallow copy now the updates you make 
+                                                    // in main object will not effect this here even if you had a
+                                                    //key that doesnt exist in main object it will be added to shallow copy
+        console.log(s2.firstname)
+        console.log(students.firstname)
+
+        students.firstname = "Omar";
+        console.log(s2.firstname)
+        console.log(students.firstname)
+        console.log(s2.lastname)
+        console.log(students.lastname)
+        console.log(s2.age)
+        console.log(students.age)
+        console.log(s2)
+        console.log(students)
+    </script>
+</body>
+</html>
