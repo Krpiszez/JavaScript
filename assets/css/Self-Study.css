@@ -1,0 +1,16 @@
+#answers{
+    background-color:darkblue;
+    color: lightblue;
+    text-align: center;
+    border-radius: 1em;
+    margin-top: 0.5em;
+}
+
+#digitalClock{
+    background-color: darkblue;
+    color: lightblue;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.2em;
+}
