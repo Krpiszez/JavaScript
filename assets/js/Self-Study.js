@@ -40,7 +40,7 @@ const time = new Date();
             document.getElementById("answerCalc").innerHTML = num1*num2;
             break;
             case "/" : 
-            document.getElementById("answerCalc").innerHTML = Math.(num1/num2);
+            document.getElementById("answerCalc").innerHTML = (num1/num2).toFixed(2);
             break;
         }
     })
