@@ -81,25 +81,25 @@
       
       <div class="input-group" style="width: 40em; margin-top: 2em;">
         <span class="input-group-text">First and last name</span>
-        <input type="text" aria-label="First name" class="form-control">
-        <input type="text" aria-label="Last name" class="form-control">
+        <input type="text" aria-label="First name" class="form-control" id="firstNameAtm">
+        <input type="text" aria-label="Last name" class="form-control" id="lastNameAtm">
       </div>
   
-      <select class="form-select" aria-label="Default select example" style="width: 40em; margin-top: 2em;" disabled>
+      <select class="form-select" aria-label="Default select example" style="width: 40em; margin-top: 2em;" disabled id="optionAtm">
         <option selected>Choose a transaction</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="Deposit">Money Deposit</option>
+        <option value="Withdraw">Money Withdraw</option>
+        <option value="Exit">Exit System</option>
       </select>
 
       <div class="input-group" style="width: 40em; margin-top: 2em;">
-        <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Enter Amount">
+        <input id="amountAtm" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Enter Amount">
         <span class="input-group-text">$</span>
         <span class="input-group-text">0.00</span>
-        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-primary" id="confirmBtnAtm">Confirm</button>
       </div>
 
-      <h4 style="background-color: aqua; color: rebeccapurple; text-align: center; margin-top: 1em; font-size: medium;"> New Amount:</h4>
+      <h4 id="messageAtm" style="background-color: aqua; color: rebeccapurple; text-align: center; margin-top: 1em; font-size: medium;"> New Amount:</h4>
 
     </div>
 
