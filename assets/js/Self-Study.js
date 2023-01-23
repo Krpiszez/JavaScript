@@ -44,3 +44,27 @@ const time = new Date();
             break;
         }
     })
+
+    const usersAtm = {
+        123456 : 1234,
+        234567 : 2345
+    };
+    const userAtm = {
+        123456 : "Ahmet",
+        234567 : "Mehmet"
+    };
+
+document.getElementById("idPwdConfirm").addEventListener("click", ()=>{
+    const accNum = document.getElementById("accNumAtm").value;
+    const pwd = document.getElementById("pwdAtm").value;
+    let optionAtm = document.querySelector(".d-none");
+    if(usersAtm[accNum]==pwd){
+        optionAtm.classList.value = "d-block";
+        alert(`Welcome to your account dear ${userAtm[accNum]}`);
+    } else alert("Wrong acc num or pwd");
+})
+
+
+    
+
+
