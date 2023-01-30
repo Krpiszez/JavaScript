@@ -20,6 +20,13 @@
         sum(5,6, (total)=>{
             console.log(`Result is : ${total}`);
         });
+
+        const Sum = (a,b,cb)=>{
+            setTimeout(()=>{
+                const Total = a+b;
+                cb(Total)}, 1200);
+        }
+        prompt("Enter Num")
         
     </script>
 </body>
