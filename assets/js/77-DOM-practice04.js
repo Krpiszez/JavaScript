@@ -2,6 +2,12 @@ import { students } from "../data/students.js";
 
 const tblStudents = document.querySelector("#tblStudents tbody")
 
+const getSum = (a,b)=>{
+    return a+b;
+}
+
+alert(getSum(3,6));
+
 const loadData = ()=>{
     let html = "";
     students.forEach((student, index)=>{
@@ -46,6 +52,8 @@ tblStudents.querySelectorAll("tr").forEach((tr) =>{
         e.target.closest("tr").classList.toggle("table-info");
     })
 })
+
+
 
 
 
