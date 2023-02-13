@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .header{
-
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/Some_Review.css">
 </head>
-<body>
+<body class="light">
+    <button class="btn-mode dark" id="btn-mode" onclick="setMode()">Dark</button>
     <h1 id="header1">Hello Review</h1>
     <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Praesentium ad voluptates eaque dolorum pariatur eum delectus illum consectetur excepturi mollitia?
@@ -26,11 +23,22 @@
         Praesentium ad voluptates eaque dolorum pariatur eum delectus illum consectetur excepturi mollitia?
     </p>
     <h1 id="header2">Hello other Review</h1>
-    <input type="text" name="" id="txtName" placeholder="Your Name" value="Alican">
+    <input type="text" name="" id="txtName" placeholder="Your Name" value="Alican" oninput="setLiveText()">
     <button id="welcomeBtn" onclick="sayHello()">Say Hello</button>
     <h2 id="welcome"></h2>
-
+    <h2 id="welcome2"></h2>
+    <input type="number" name="" id="priceInput">
+    <button onclick="calculate()">Calculate</button><br>
     
+    <form action="" style="margin: 2rem;">
+        <input type="text" name="" id="txtSalary" placeholder="Salary"><br>
+        <input type="radio" name="status" id="rdEmployee" value="employee"><label for="rdEmployee">Employee</label><br>
+        <input type="radio" name="status" id="rdRetired" value="retired"><label for="rdRetired">Retired</label><br>
+        <button id="calculateBtn">Calculate</button>
+    </form>
+    <h2 id="showSalary">Salary</h2>
+
+
 
     <script src="/assets/js/Some_Review.js"></script>
 </body>
