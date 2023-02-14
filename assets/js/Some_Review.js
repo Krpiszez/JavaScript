@@ -41,3 +41,24 @@ let showSalary = document.querySelector("#showSalary");
     showSalary.innerHTML = `New Salary: ${salary}.`;
 })
 
+document.getElementById("btnRate").addEventListener("click", () => {
+    const rateEl = Number (document.getElementById("txtRate").value);
+    const productListEl = document.querySelectorAll("#productList li");
+    
+    for (let i = 0; i<productListEl.length; i++){
+        let price = productListEl[i].querySelector("span");
+        let numPrice = Number(price.innerHTML);
+        price.innerHTML = numPrice + numPrice * rateEl / 100;
+    }
+
+})
+
+document.getElementById("btnFactoriel").addEventListener("click", ()=>{
+    let sum =1; 
+    let num = prompt("Enter num to get factoriel!");
+    while(num>0){
+        sum*=num--;
+    }
+    alert(sum);
+})
+
