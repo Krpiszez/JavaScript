@@ -24,6 +24,7 @@
         Area: 
     </p>
 </div>
+<h1 id="result"></h1>
     
     <script>
         let areaText = document.querySelector("#area");
@@ -32,6 +33,13 @@
         let area = height*width;
         alert(area);
         areaText.innerText = `Area: ${area}`;
+
+        let a = prompt("Enter a") ?? 5;
+        let b = prompt("Enter b") ?? 10;
+        let calculateArea = (a, b) => {
+            document.getElementById("result").innerHTML = a*b;
+        }
+        calculateArea(a,b);
     </script>
 </body>
 </html>
