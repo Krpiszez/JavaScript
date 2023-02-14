@@ -61,4 +61,20 @@ document.getElementById("btnFactoriel").addEventListener("click", ()=>{
     }
     alert(sum);
 })
+    let price = Number (document.getElementById("inPrice").value);
+    let tax = Number (document.getElementById("inTax").value);
+    let discount = Number (document.getElementById("inDiscount").value);
+    const spanRes = document.getElementById("spanRes");
+document.getElementById("btnCalcPrice").addEventListener("click", (price, tax, discount)=>{
+    if(!price || isNaN(price) ||!tax ||isNaN(tax||!discount||isNaN(discount))) return;
+    if(discount<=0) tax=0;
+    if(price>1500) discount +=10;
+
+    const totalTax = price*tax/100;
+    const totalDiscount = price * discount/100;
+
+    const result = price + totalTax - totalDiscount;
+    spanRes.innerHTML = result;
+
+})
 
