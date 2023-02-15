@@ -87,7 +87,7 @@ const generateRandomNumber = (min, max) => {
 const startGame = document.getElementById("btnStart").addEventListener("click", ()=>{
     randomNumber = generateRandomNumber(1,100);
     const btnGuess = document.getElementById("btnGuess");
-    const btnStart = document.getElementById("btnStart");
+    const btnStart = document.getElementById("btnStart"); 
     btnGuess.style.display = "inline";
     btnStart.style.display = "none";
 })
@@ -98,10 +98,49 @@ document.getElementById("btnGuess").addEventListener("click", ()=>{
     if (userNum == randomNumber){
         alert("You have found the number")
         btnGuess.style.display = "none";
+        btnStart.style.display = "inline";
     } else if(userNum>randomNumber){
         alert("Incorrect guess. Try a smaller number!")
     } else {
         alert("Incorrect guess. Try a bigger number!")
     }
+
+    document.getElementById("txtNumber").value = "";
+})
+
+const score1El = document.getElementById("textScore1");
+const score2El = document.getElementById("textScore2");
+const score3El = document.getElementById("textScore3");
+
+const isScoreValid = (grade) =>{
+    return (grade || grade === 0) && !isNaN(grade) && grade <=100 && grade >= 0;
+}
+
+const calculateAverage = (num1, num2, num3) => {
+    if (!isScoreValid(num1) || !isScoreValid(num2) || !isScoreValid(num3)) return false;
+
+    const result = (Number (num1) + Number (num2) + Number (num3))  / 3;
+    return result;
+}
+
+const gradeToLetter = (grade) => {
+    if(!isScoreValid(grade)) return false;
+    let letter = "";
+    if(grade>=90 && grade <= 100) letter = "A";
+    else if(grade>=80 && grade <= 90) letter = "B";
+    else if(grade>=70 && grade <= 80) letter = "C";
+    else if(grade>=60 && grade <= 70) letter = "D";
+    else if(grade>=50 && grade <= 60) letter = "E";
+    else letter = "F";
+    return letter;
+
+}
+
+document.getElementById("btnAverage").addEventListener("click", ()=>{
+    const average = calculateAverage(score1El.value, score2El.value, score3El.value);
+    if(!average) alert("Enter valid scores");
+
+    alert(gradeToLetter(average));
+
 })
 

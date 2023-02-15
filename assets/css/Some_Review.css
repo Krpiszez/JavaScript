@@ -43,3 +43,10 @@
     color: white;
     display: none;
 }
+
+.grading{
+    border: 1px rgb(184,184,184);
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
