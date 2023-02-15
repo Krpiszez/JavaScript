@@ -1,3 +1,5 @@
+import {countries} from "../data/countries.js";
+
 const sayHello = () => {
     const name1El = document.querySelector("#txtName");
     const text1El = document.querySelector("#welcome");
@@ -143,4 +145,38 @@ document.getElementById("btnAverage").addEventListener("click", ()=>{
     alert(gradeToLetter(average));
 
 })
+
+let arrayElements = document.getElementById("arrayLabel");
+let maxElement = document.getElementById("maxArrayLabel");
+let newElement = document.getElementById("newArrayLabel");
+document.getElementById("arrayBtn").addEventListener("click", () => {
+    let arr = [];
+    for (let i =0; i<5; i++){
+        let num = Math.floor(Math.random() * 100 + 1);
+        arr[i] = num;
+    }
+    let max = 0;
+    for(let j = 0; j<arr.length; j++){
+        max = Math.max(arr[j], max);
+    }
+    arrayElements.innerHTML = arr;
+    maxElement.innerHTML = max;
+    for(let k = 0; k<arr.length; k++){
+        arr[k] = Math.round(arr[k] * 1.2);
+    }
+    
+    newElement.innerHTML = arr;
+    
+})
+let countryData = document.getElementById("countriesOpt");
+let loadCountries = () => {
+    let option = "";
+    for (let country of countries){
+        option += `<option value="${country.ccn3}">${country.name.common}</option>`;
+    }
+countryData.innerHTML = option;
+}
+
+loadCountries();
+
 
