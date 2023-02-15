@@ -78,3 +78,30 @@ document.getElementById("btnCalcPrice").addEventListener("click", (price, tax, d
 
 })
 
+let randomNumber = 0;
+
+const generateRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const startGame = document.getElementById("btnStart").addEventListener("click", ()=>{
+    randomNumber = generateRandomNumber(1,100);
+    const btnGuess = document.getElementById("btnGuess");
+    const btnStart = document.getElementById("btnStart");
+    btnGuess.style.display = "inline";
+    btnStart.style.display = "none";
+})
+
+document.getElementById("btnGuess").addEventListener("click", ()=>{
+    const userNum = Number (document.getElementById("txtNumber").value);
+    const gameNum = randomNumber;
+    if (userNum == randomNumber){
+        alert("You have found the number")
+        btnGuess.style.display = "none";
+    } else if(userNum>randomNumber){
+        alert("Incorrect guess. Try a smaller number!")
+    } else {
+        alert("Incorrect guess. Try a bigger number!")
+    }
+})
+
