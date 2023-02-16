@@ -179,4 +179,24 @@ countryData.innerHTML = option;
 
 loadCountries();
 
+const tryList = [12500, 20000, 25000, 10000];
+const usd = 18.65;
+const eur = 19.68;
+
+const usdList = tryList.map((crncy) => Math.round(crncy/usd));
+const eurList = tryList.map((crncy) => Math.round(crncy/eur));
+
+document.getElementById("try").innerHTML = tryList.join("-");
+document.getElementById("usd").innerHTML = usdList.join("-");
+document.getElementById("eur").innerHTML = eurList.join("-");
+
+let prices = [100, 50, 70, 200, 80];
+
+document.getElementById("calculatePrices").addEventListener("click", ()=>{
+   let updatedPrices = prices.map((price) => (price > 100 ? price*1.10 : price * 1.15).toFixed(1));
+   alert (prices.join("-"));
+   alert (updatedPrices.join("-"));
+})
+
+
 
