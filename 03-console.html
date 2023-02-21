@@ -9,10 +9,18 @@
     <body>
         <h1>CONSOLE</h1>
 
+
+
         <script>
             console.log("Hello World");
             console.warn("This is a warning message!!");
             console.error("This is an error message!");
+
+            const array = [3,6,8,9,12];
+            const sum = array.reduce((a,b)=> {
+                console.log(a,b);
+                return a+b;},0);
+            console.log(sum)
         </script>
     </body>
 </html>
