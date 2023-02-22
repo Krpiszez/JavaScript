@@ -203,7 +203,7 @@ const loadData = () => {
         let strHtml = "";
         students.forEach((student, index)=>{
         strHtml+=    `<tr>
-                    <th scope="row">${index}</th>
+                    <th scope="row">${index+1}</th>
                     <td>${student.name}</td>
                     <td>${student.grade}</td>
             </tr>`
@@ -214,6 +214,19 @@ const loadData = () => {
 }
 
 loadData();
+
+const scoreBtn = document.getElementById("showLowScores");
+
+scoreBtn.addEventListener("click", ()=>{
+    const tableEl = document.querySelector("#tblStudents tbody");
+    const trEl = tableEl.querySelectorAll("tr td:last-child");
+    
+    trEl.forEach((td, index)=>{
+        if(td.innerText<50){
+            tableEl.querySelector(`tr:nth-child(${index+1})`).style.backgroundColor = "red";
+        }
+    })
+})
 
 
 
