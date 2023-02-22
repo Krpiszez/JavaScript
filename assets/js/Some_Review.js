@@ -1,4 +1,5 @@
 import {countries} from "../data/countries.js";
+import {students} from "../data/students.js"
 
 const sayHello = () => {
     const name1El = document.querySelector("#txtName");
@@ -197,6 +198,24 @@ document.getElementById("calculatePrices").addEventListener("click", ()=>{
    alert (prices.join("-"));
    alert (updatedPrices.join("-"));
 })
+
+const loadData = () => {
+        let strHtml = "";
+        students.forEach((student, index)=>{
+        strHtml+=    `<tr>
+                    <th scope="row">${index}</th>
+                    <td>${student.name}</td>
+                    <td>${student.grade}</td>
+            </tr>`
+        })
+        const tableEl = document.querySelector("#tblStudents tbody");
+        tableEl.innerHTML = strHtml;
+
+}
+
+loadData();
+
+
 
 
 
