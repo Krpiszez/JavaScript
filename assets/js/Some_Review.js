@@ -205,7 +205,8 @@ const loadData = () => {
         strHtml+=    `<tr>
                     <th scope="row">${index+1}</th>
                     <td>${student.name}</td>
-                    <td>${student.grade}</td>
+                    <td class="tdScore">${student.grade}</td>
+                    <td><button class="btn btn-danger btn-delete">🗑️</button></td>
             </tr>`
         })
         const tableEl = document.querySelector("#tblStudents tbody");
@@ -219,12 +220,21 @@ const scoreBtn = document.getElementById("showLowScores");
 
 scoreBtn.addEventListener("click", ()=>{
     const tableEl = document.querySelector("#tblStudents tbody");
-    const trEl = tableEl.querySelectorAll("tr td:last-child");
+    const trEl = tableEl.querySelectorAll(`tr td:nth-child(3)`);
     
     trEl.forEach((td, index)=>{
+        
         if(td.innerText<50){
             tableEl.querySelector(`tr:nth-child(${index+1})`).style.backgroundColor = "red";
         }
+    })
+})
+const btnsStudents = document.querySelectorAll(".btn-delete");
+btnsStudents.forEach((btn)=>{
+    btn.addEventListener("click", (e)=>{
+        const result = confirm("Are you sure you want to delete?")
+        const tableEl = document.querySelector("#tblStudents tbody");
+        
     })
 })
 
