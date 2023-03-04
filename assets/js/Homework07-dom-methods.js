@@ -15,8 +15,12 @@ const time = new Date();
     
     const currentTime = `${hour} : ${min} : ${second}`
 
+    
+
     document.getElementById("digitalClock").innerHTML = currentTime;
     }, 1000)
+
+    alert(currentTime);
     
 
 const addBtn = document.getElementById("addBtn");
